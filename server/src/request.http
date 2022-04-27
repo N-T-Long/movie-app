@@ -1,0 +1,115 @@
+GET http://localhost:5000/
+
+###
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "long",
+    "password": "PhamHoa290417",
+    "email": "nguyenthanhlong031120@gmail.com"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "long",
+    "password": "PhamHoa290417",
+    "email": "nguyenthanhlong031120@gmail.com"
+}
+
+###
+POST http://localhost:5000/api/movies/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MjViMGE5YzA3OThlZWQ5OTcyNTA5NzQiLCJpYXQiOjE2NTAxNDM4MTh9.rWsFwXtjOrcEQAaVXWSpsCeO3qYhT246U4Ak_j_gAac
+
+{
+    "name" : "Án Mạng Trên Sông Nile",
+    "other_name" : "Death On The Nile",
+    "view" : 12700,
+    "type" : "Phim lẻ",
+    "year" : "2022",
+    "duration" : "120",
+    "description" : "Phim kể về vị thám tử Poirot bắt đầu chuyến hành trình tham quan Ai Cập tại chiếc du thuyền nhỏ dành cho giới nhà giàu. Trên chuyến đi, Poirot đã gặp gỡ được một cặp đôi nam thanh nữ tú, đang tận hưởng kỳ trăng mặt lãng mạn của mình là Linnet Doyle một triệu phú trẻ cùng với người chồng mới cưới Simon Doyle. Không hạnh phúc được bao lâu thì chuyến đi của họ bỗng bị phá hỏng sau khi phát hiện người tình cũ của Simon là Bellefort đã bám theo và phá vỡ mọi thứ.",
+    "cast" : [
+        {
+            "name": "Gal Gadot"
+        },
+        {
+            "name": "Tom Bateman"
+        },
+        {
+            "name": "Annette Bening"
+        },
+        {
+            "name": "Kenneth Branagh"
+        }
+    ],
+    "genres" : [
+        {
+            "name": "Hình sự"
+        },
+        {
+            "name": "Tâm lý"
+        },
+        {
+            "name": "Phiêu lưu"
+        }
+    ],
+    "language" : "Tiếng Việt",
+    "episode" : [
+        {
+            "name": "Full",
+            "URL_episode": "youtube.com/embed/4hhOZ1QWU4g"
+        }
+    ], 
+    "URL_image": "https://static.247phim.com/164560/conversions/623f23fa660f9_death-on-the-nile-poster-2022-e1644567548900-435_627.jpg"
+}
+
+###
+POST http://localhost:5000/api/movies/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MjViMGE5YzA3OThlZWQ5OTcyNTA5NzQiLCJpYXQiOjE2NTAxNDM4MTh9.rWsFwXtjOrcEQAaVXWSpsCeO3qYhT246U4Ak_j_gAac
+
+{
+    "name" : "Hòn Đảo Khủng Long",
+    "other_name" : "Jurassic Island ",
+    "view" : "1100",
+    "type" : "Phim lẻ",
+    "year" : "2022",
+    "duration" : 120,
+    "description" : "Một nhóm các nhà thám hiểm thấy mình trên một hòn đảo vô danh được bao quanh bởi những loài động vật đã tuyệt chủng.",
+    "cast" : [
+        {
+            "name": "Sarah T. Cohen"
+        },
+        {
+            "name": " Nicola Wright"
+        },
+        {
+            "name": "Tom Taplin"
+        }
+    ],
+    "genres" : [
+        {
+            "name": "Viễn tưởng"
+        },
+        {
+            "name": "Phiêu lưu"
+        }
+    ],
+    "language" : "Tiếng Việt",
+    "episode" : [
+        {
+            "name": "Full",
+            "URL_episode": "https://www.youtube.com/embed/GteEVXRBJEg"
+        }
+    ], 
+    "URL_image": "https://static.247phim.com/164711/conversions/62579a8db1002_khunglong-435_627.jpg"
+}
+
+
+###
+GET http://localhost:5000/api/movies
